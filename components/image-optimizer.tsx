@@ -103,7 +103,7 @@ export function ImageOptimizer() {
   }
 
   return (
-    <div className="flex flex-col  gap-6 items-start w-full h-auto md:flex-row md:overflow-hidden">
+    <div className="flex flex-col  gap-6 items-start w-full h-auto md:h-full md:flex-row md:overflow-hidden">
       {/* Left column: Upload zone and settings */}
       <div className="w-full md:w-96 md:flex-shrink-0 space-y-6">
         <ImageUploadZone onFilesAdded={handleFilesAdded} />
