@@ -2,8 +2,8 @@ import { ImageOptimizer } from "@/components/image-optimizer";
 
 export default function Home() {
   return (
-    <main className="bg-background flex flex-col h-dvh w-dvw overflow-hidden">
-      <div className=" flex flex-col gap-4 p-4  h-full">
+    <main className="bg-background flex flex-col h-dvh w-dvw overflow-x-hidden overflow-y-scroll md:overflow-hidden">
+      <div className=" flex flex-col gap-4 p-4  h-auto w-dvw md:h-full">
         <header className="flex items-center justify-between">
           <div>
             <h1 className="text-xl font-bold tracking-tight text-foreground">

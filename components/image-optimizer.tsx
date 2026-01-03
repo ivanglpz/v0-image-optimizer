@@ -103,7 +103,7 @@ export function ImageOptimizer() {
   }
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 items-start w-full h-full overflow-y-scroll md:overflow-hidden">
+    <div className="flex flex-col  gap-6 items-start w-full h-auto md:flex-row md:overflow-hidden">
       {/* Left column: Upload zone and settings */}
       <div className="w-full md:w-96 md:flex-shrink-0 space-y-6">
         <ImageUploadZone onFilesAdded={handleFilesAdded} />
@@ -186,19 +186,7 @@ export function ImageOptimizer() {
 
       {/* Right column: Image previews with scroll */}
       {images.length > 0 && (
-        <div
-          className="
-    w-full
-    h-full
-    gap-4
-    md:overflow-y-scroll
-    flex
-    flex-col
-    md:flex-row
-    flex-wrap
-    content-start
-  "
-        >
+        <div className="content-start -full h-full gap-4 flex flex-row overflow-x-scroll md:overflow-x-hidden md:flex-wrap md:overflow-y-scroll md">
           {images.map((image) => (
             <ImagePreview
               key={image.id}
