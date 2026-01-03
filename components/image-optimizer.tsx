@@ -124,7 +124,7 @@ export function ImageOptimizer() {
                   variant="outline"
                   size="sm"
                   onClick={handleClearAll}
-                  className="gap-2 bg-transparent"
+                  className="gap-2 bg-transparent cursor-pointer"
                 >
                   <Trash2 className="h-4 w-4" />
                   Clear All
@@ -160,7 +160,7 @@ export function ImageOptimizer() {
                 <Button
                   onClick={handleOptimize}
                   disabled={isProcessing}
-                  className="w-full"
+                  className="w-full cursor-pointer"
                 >
                   {isProcessing
                     ? "Processing..."
@@ -172,7 +172,7 @@ export function ImageOptimizer() {
                   <Button
                     variant="outline"
                     onClick={handleDownloadAll}
-                    className="w-full gap-2 bg-transparent"
+                    className="w-full gap-2 bg-transparent cursor-pointer"
                   >
                     <Download className="h-4 w-4" />
                     Download All

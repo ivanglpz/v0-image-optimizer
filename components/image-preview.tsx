@@ -79,7 +79,7 @@ export function ImagePreview({ image, onRemove }: ImagePreviewProps) {
           <Button
             variant="outline"
             size="sm"
-            className="w-full gap-2 bg-transparent"
+            className="w-full gap-2 bg-transparent cursor-pointer"
             onClick={handleDownload}
           >
             <Download className="h-4 w-4" />
