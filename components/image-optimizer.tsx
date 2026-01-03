@@ -111,15 +111,15 @@ export function ImageOptimizer() {
         {images.length > 0 && (
           <Card className="p-6 bg-card">
             <div className="space-y-6">
-              <div className="flex items-center justify-between pb-4 border-b border-border">
-                <div className="space-y-1">
+              <div className="flex flex-row gap-2 justify-between pb-4 border-b border-border">
+                <section className="flex flex-col justify-between">
                   <h3 className="text-lg font-semibold text-card-foreground">
                     Settings
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     Adjust compression settings for all images
                   </p>
-                </div>
+                </section>
                 <Button
                   variant="outline"
                   size="sm"

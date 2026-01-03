@@ -43,12 +43,12 @@ export function ImagePreview({ image, onRemove }: ImagePreviewProps) {
           className="w-full h-full object-contain"
         />
         <Button
-          variant="destructive"
+          variant="default"
           size="icon"
-          className="absolute top-2 right-2 h-8 w-8"
+          className="absolute top-2 bg-red-500 border border-red-400 hover:bg-red-700 cursor-pointer right-2 h-8 w-8"
           onClick={() => onRemove(image.id)}
         >
-          <X className="h-4 w-4" />
+          <X className="h-4 w-4 text-white" />
         </Button>
         {image.optimized && (
           <div className="absolute top-2 left-2 bg-accent text-accent-foreground px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1">
