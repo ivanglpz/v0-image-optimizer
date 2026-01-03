@@ -186,7 +186,19 @@ export function ImageOptimizer() {
 
       {/* Right column: Image previews with scroll */}
       {images.length > 0 && (
-        <div className="w-full flex h-full flex-col gap-4 md:flex-row md:flex-wrap md:overflow-y-scroll">
+        <div
+          className="
+    w-full
+    h-full
+    gap-4
+    md:overflow-y-scroll
+    flex
+    flex-col
+    md:flex-row
+    flex-wrap
+    content-start
+  "
+        >
           {images.map((image) => (
             <ImagePreview
               key={image.id}
