@@ -1,19 +1,23 @@
-import { ImageOptimizer } from "@/components/image-optimizer"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { ImageOptimizer } from "@/components/image-optimizer";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
-    <main className="min-h-screen  bg-background flex flex-col">
-      <div className="container mx-auto px-4 py-8 max-w-7xl h-full">
-        <header className="mb-8 flex items-center justify-between">
+    <main className="bg-background flex flex-col h-dvh w-dvw overflow-hidden">
+      <div className=" flex flex-col gap-4 p-4  h-full">
+        <header className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-foreground mb-2">Image Optimizer</h1>
-            <p className="text-muted-foreground">{"Optimize your images for better quality and compression"}</p>
+            <h1 className="text-xl font-bold tracking-tight text-foreground">
+              Image Optimizer
+            </h1>
+            <p className="text-muted-foreground text-sm">
+              {"Optimize your images for better quality and compression"}
+            </p>
           </div>
           <ThemeToggle />
         </header>
         <ImageOptimizer />
       </div>
     </main>
-  )
+  );
 }

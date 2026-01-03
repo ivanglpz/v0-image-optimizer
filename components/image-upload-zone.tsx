@@ -1,41 +1,45 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useCallback } from "react"
-import { Card } from "@/components/ui/card"
-import { Upload } from "lucide-react"
+import { Card } from "@/components/ui/card";
+import { Upload } from "lucide-react";
+import { useCallback } from "react";
 
 interface ImageUploadZoneProps {
-  onFilesAdded: (files: File[]) => void
+  onFilesAdded: (files: File[]) => void;
 }
 
 export function ImageUploadZone({ onFilesAdded }: ImageUploadZoneProps) {
   const handleDrop = useCallback(
     (e: React.DragEvent<HTMLDivElement>) => {
-      e.preventDefault()
-      const files = Array.from(e.dataTransfer.files).filter((file) => file.type.startsWith("image/"))
+      e.preventDefault();
+      const files = Array.from(e.dataTransfer.files).filter((file) =>
+        file.type.startsWith("image/")
+      );
       if (files.length > 0) {
-        onFilesAdded(files)
+        onFilesAdded(files);
       }
     },
-    [onFilesAdded],
-  )
+    [onFilesAdded]
+  );
 
   const handleFileInput = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      const files = Array.from(e.target.files || []).filter((file) => file.type.startsWith("image/"))
+      const files = Array.from(e.target.files || []).filter((file) =>
+        file.type.startsWith("image/")
+      );
       if (files.length > 0) {
-        onFilesAdded(files)
+        onFilesAdded(files);
       }
-      e.target.value = ""
+      e.target.value = "";
     },
-    [onFilesAdded],
-  )
+    [onFilesAdded]
+  );
 
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   return (
     <Card
@@ -47,13 +51,26 @@ export function ImageUploadZone({ onFilesAdded }: ImageUploadZoneProps) {
         <div className="p-12 text-center">
           <Upload className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
           <div className="space-y-2">
-            <p className="text-lg font-medium text-foreground">Drop images here or click to upload</p>
-            <p className="text-sm text-muted-foreground">Support for JPG, PNG, WebP, and other image formats</p>
-            <p className="text-xs text-muted-foreground">You can select multiple files at once</p>
+            <p className="text-base font-medium text-foreground">
+              Drop images here or click to upload
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Support for JPG, PNG, WebP, and other image formats
+            </p>
+            <p className="text-xs text-muted-foreground">
+              You can select multiple files at once
+            </p>
           </div>
         </div>
-        <input id="file-upload" type="file" multiple accept="image/*" className="sr-only" onChange={handleFileInput} />
+        <input
+          id="file-upload"
+          type="file"
+          multiple
+          accept="image/*"
+          className="sr-only"
+          onChange={handleFileInput}
+        />
       </label>
     </Card>
-  )
+  );
 }
