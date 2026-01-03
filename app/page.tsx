@@ -1,5 +1,4 @@
 import { ImageOptimizer } from "@/components/image-optimizer";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
               {"Optimize your images for better quality and compression"}
             </p>
           </div>
-          <ThemeToggle />
         </header>
         <ImageOptimizer />
       </div>
